@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Félix “passcod” Saparelli — Blog]]></title>
+        <description><![CDATA[Feed of the front page of @passcod’s blog]]></description>
+        <link>https://blog.passcod.name</link>
+        <image>
+            <url>https://secure.gravatar.com/avatar/a794d473626fc9d329a035c38e2fb832</url>
+            <title>Félix “passcod” Saparelli — Blog</title>
+            <link>https://blog.passcod.name</link>
+        </image>
+        <generator>blograph/1.3.3</generator>
+        <lastBuildDate>Thu, 15 Oct 2020 14:46:35 GMT</lastBuildDate>
+        <atom:link href="https://blog.passcod.name/feed" rel="self" type="application/rss+xml"/>
+        <copyright><![CDATA[© 2008-2020. License: CC-BY 4.0 International.]]></copyright>
+        <language><![CDATA[en_NZ]]></language>
+        <ttl>360</ttl>
+        <item>
+            <title><![CDATA[Known Unknowns: a configuration language (Dhall review)]]></title>
+            <description><![CDATA[Last month I dove into Dhall after discovering it more than a year ago but never having the excuse to really get stuck into it. Last month I got two different opportunities, and used it for both: an]]></description>
+            <link>https://blog.passcod.name/2020/aug/05/known-unknowns-a-configuration-language</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2020/aug/05/known-unknowns-a-configuration-language</guid>
+            <pubDate>Wed, 05 Aug 2020 13:59:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: July 2020]]></title>
+            <description><![CDATA[<b>Fiction</b> {Naruto/Sherlock} ‘A Holmes in Konoha’ series. {705k words atow} {Naruto} A Genin’s Guide to Not Dying a]]></description>
+            <link>https://blog.passcod.name/2020/jul/31/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2020/jul/31/monthly-update</guid>
+            <pubDate>Fri, 31 Jul 2020 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[COVID Update: March through June 2020]]></title>
+            <description><![CDATA[I didn’t update during march, and then Covid happened and I still didn’t, and then we got all the way down to Level 1, and I still didn’t, and finally I decided to. What this mostly affects is the fiction listing, as there’s now no record]]></description>
+            <link>https://blog.passcod.name/2020/jun/30/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2020/jun/30/monthly-update</guid>
+            <pubDate>Tue, 30 Jun 2020 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Check all applicable labels]]></title>
+            <description><![CDATA[This is the third in a series of posts going back to 2017 where I attempt to describe the labels that apply to me. The first, “Guy-Adjacent”, I know some people liked a lot and resonated with some of the things in it, but it doesn’t match me <em>a</em>]]></description>
+            <link>https://blog.passcod.name/2020/jun/22/check-all-applicable-labels</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2020/jun/22/check-all-applicable-labels</guid>
+            <pubDate>Mon, 22 Jun 2020 23:23:02 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Full-disk encryption with Btrfs, swap, and hibernation]]></title>
+            <description><![CDATA[I set up a laptop this month and it had been several years since the last time! In the meantime, I have set up many servers, tho, and I have switched my practice from an ext4 system partition and btrfs home partition to putting the full disk as]]></description>
+            <link>https://blog.passcod.name/2020/jun/16/full-disk-encryption-with-btrfs-swap-and-hibernation</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2020/jun/16/full-disk-encryption-with-btrfs-swap-and-hibernation</guid>
+            <pubDate>Tue, 16 Jun 2020 09:30:39 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Wasm bits and bobs]]></title>
+            <description><![CDATA[<b>Background</b> I’ve been dabbling with Wasm for several years, but only really started going at it in the past month, and for the purposes of this post, for the past two weeks. I had]]></description>
+            <link>https://blog.passcod.name/2020/mar/17/wasm-bits-and-bobs</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2020/mar/17/wasm-bits-and-bobs</guid>
+            <pubDate>Tue, 17 Mar 2020 08:10:59 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: February 2020]]></title>
+            <description><![CDATA[<b>Fiction</b> {Sherlock/HP} It Takes All Sorts. {26k words} {Sherlock/HP} A Beginner’s Guide to Selecting Your Ideal Pet&lt;]]></description>
+            <link>https://blog.passcod.name/2020/feb/29/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2020/feb/29/monthly-update</guid>
+            <pubDate>Sat, 29 Feb 2020 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Dnssec for a private zone]]></title>
+            <description><![CDATA[Whoops none of this happened/it all got abandoned and is not relevant anymore. <strong><em>Housekeeping</em></strong>: <em>I have long-standing plans to modernise and refresh the appearance, organisation, and content of </em>]]></description>
+            <link>https://blog.passcod.name/2020/feb/28/dnssec-for-a-private-zone</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2020/feb/28/dnssec-for-a-private-zone</guid>
+            <pubDate>Fri, 28 Feb 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: January 2020]]></title>
+            <description><![CDATA[<b>Fiction</b> {HP/Naruto} Connections. {127k words atow} {HP/Marvel} ‘Misunderstandings’ series. {29k words atow}]]></description>
+            <link>https://blog.passcod.name/2020/jan/31/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2020/jan/31/monthly-update</guid>
+            <pubDate>Fri, 31 Jan 2020 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: December 2019]]></title>
+            <description><![CDATA[<b>Donations</b> This year I decided to forgo donating to organisations. This had many reasons, most of which boiled down to most organisations sending me about a ream of paper each in “pwease donate” advertising throughout this year, which I]]></description>
+            <link>https://blog.passcod.name/2019/dec/31/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/dec/31/monthly-update</guid>
+            <pubDate>Tue, 31 Dec 2019 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: November 2019]]></title>
+            <description><![CDATA[<b>Fiction</b> {HP} <strong>Three Little Birds</strong>. {16k words} {HP} ‘Hermione Granger and the Serpent’s Renaissance’]]></description>
+            <link>https://blog.passcod.name/2019/nov/30/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/nov/30/monthly-update</guid>
+            <pubDate>Sat, 30 Nov 2019 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: October 2019]]></title>
+            <description><![CDATA[<b>Fiction</b> {HP} oh, aquarius. {2k words} {HP} DTF. {3k words} {HP}]]></description>
+            <link>https://blog.passcod.name/2019/oct/31/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/oct/31/monthly-update</guid>
+            <pubDate>Thu, 31 Oct 2019 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: September 2019]]></title>
+            <description><![CDATA[<b>Abandoning Notify</b> I made the decision to abandon Notify. I wrote lots about it, both on Github and on]]></description>
+            <link>https://blog.passcod.name/2019/sep/30/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/sep/30/monthly-update</guid>
+            <pubDate>Mon, 30 Sep 2019 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: August 2019]]></title>
+            <description><![CDATA[<b>Fiction</b> {HP} pansy’s influence. {4k words} {HP} Kneazles, Cocoa and Chess. {1k words} {Good Omens}]]></description>
+            <link>https://blog.passcod.name/2019/aug/31/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/aug/31/monthly-update</guid>
+            <pubDate>Sat, 31 Aug 2019 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: July 2019]]></title>
+            <description><![CDATA[<b>Fiction</b> Also see this Twitter thread where I essentially live-tweet the fic browsing process. If I have fun doing it, I might keep at it and re-link the month’s first]]></description>
+            <link>https://blog.passcod.name/2019/jul/31/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/jul/31/monthly-update</guid>
+            <pubDate>Wed, 31 Jul 2019 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: June 2019]]></title>
+            <description><![CDATA[<b>Fiction</b> {HP} Closer. {8k words} {HP} <strong>Distance</strong>. {138k words} {HP}]]></description>
+            <link>https://blog.passcod.name/2019/jun/30/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/jun/30/monthly-update</guid>
+            <pubDate>Sun, 30 Jun 2019 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: May 2019]]></title>
+            <description><![CDATA[<b>Fiction</b> {SW} Don’t Go Gently Into This Darkness. {12k words} {LotR} <strong>Rotten Tomatoes</strong>. {1k]]></description>
+            <link>https://blog.passcod.name/2019/may/31/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/may/31/monthly-update</guid>
+            <pubDate>Fri, 31 May 2019 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: April 2019]]></title>
+            <description><![CDATA[<b>What</b> <strong>What</strong> is a new little tool I made this month, that tracks what I’m working on at the moment. These monthly updates often have summaries of things I’ve started or finished or]]></description>
+            <link>https://blog.passcod.name/2019/apr/30/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/apr/30/monthly-update</guid>
+            <pubDate>Tue, 30 Apr 2019 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: March 2019]]></title>
+            <description><![CDATA[<b>Keycasting</b> I have been spending most of the month trying to cast a key in epoxy. It’s an]]></description>
+            <link>https://blog.passcod.name/2019/mar/31/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/mar/31/monthly-update</guid>
+            <pubDate>Sun, 31 Mar 2019 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: February 2019]]></title>
+            <description><![CDATA[<b>Notify</b> There’s a bunch of work happening on Notify at the moment. I’ve basically taken it out of being “frozen” and back into maintainership. I do <em>not</em> want to spend any significant amount of time on it, but I welcome anyone else]]></description>
+            <link>https://blog.passcod.name/2019/feb/28/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/feb/28/monthly-update</guid>
+            <pubDate>Thu, 28 Feb 2019 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: January 2019]]></title>
+            <description><![CDATA[<b>Monthly updates are now actually monthly</b> The 10th-day thing got old. It was an artifact of when I actually started this monthly thing, but the confusion of writing about half of the past month and half of the current was really odd.]]></description>
+            <link>https://blog.passcod.name/2019/jan/31/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2019/jan/31/monthly-update</guid>
+            <pubDate>Thu, 31 Jan 2019 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Yearly summary]]></title>
+            <description><![CDATA[Last year, I gave myself three objectives: <strong>Read 300 books.</strong> That didn’t pan out! I read maybe 10. But I also weaned myself off fanfiction, to the point where I read mostly updates now, and not very much new]]></description>
+            <link>https://blog.passcod.name/2018/dec/31/yearly-summary</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/dec/31/yearly-summary</guid>
+            <pubDate>Mon, 31 Dec 2018 09:20:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: December 2018]]></title>
+            <description><![CDATA[<b>Sassbot</b> I ended up writing 400 words of fic and working nigh-on continuously on the bot, adding myriad improvements and setting things up for the future. The first big thing was that the community moved from IRC to Discord, so I]]></description>
+            <link>https://blog.passcod.name/2018/dec/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/dec/10/monthly-update</guid>
+            <pubDate>Mon, 10 Dec 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: November 2018]]></title>
+            <description><![CDATA[<b>Sassbot</b> Not doing NaNoWriMo this year, but I’m still maintaining the bot! (And what a wonderful thing to be coding in Ruby again!) This year it got some sweet upgrades,]]></description>
+            <link>https://blog.passcod.name/2018/nov/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/nov/10/monthly-update</guid>
+            <pubDate>Sat, 10 Nov 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: October 2018]]></title>
+            <description><![CDATA[<b>Fanfiction</b> {HP} A Cauldron Full of Hot, Strong Love. {4k words} {HP} To Do A Weasley. {20k words} {HP}]]></description>
+            <link>https://blog.passcod.name/2018/oct/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/oct/10/monthly-update</guid>
+            <pubDate>Wed, 10 Oct 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My words]]></title>
+            <description><![CDATA[<strong>Obsoleted by Check all applicable labels.</strong> When I wrote Guy-Adjacent, I positioned myself from a position of not wanting]]></description>
+            <link>https://blog.passcod.name/2018/sep/13/my-words</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/sep/13/my-words</guid>
+            <pubDate>Thu, 13 Sep 2018 08:45:32 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Smile]]></title>
+            <description><![CDATA[You think you are out there exploring the limits. The limits of the possible,<i> /</i> the limits of the feasible,<i> /</i> the limits of the thinkable. The limits of the imaginable. And we smile, when we see you, children that you]]></description>
+            <link>https://blog.passcod.name/2018/sep/12/smile</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/sep/12/smile</guid>
+            <pubDate>Wed, 12 Sep 2018 07:59:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Extracting JS from HTML source]]></title>
+            <description><![CDATA[I decided last month I would make an effort to post more technical articles, single-thing blurbs to show neat things I’ve done, or just tiny scripts, workspace improvements, that kind of thing. Today’s is a small ruby script I coded in a]]></description>
+            <link>https://blog.passcod.name/2018/sep/10/extracting-js-from-html-source</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/sep/10/extracting-js-from-html-source</guid>
+            <pubDate>Mon, 10 Sep 2018 05:13:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: September 2018]]></title>
+            <description><![CDATA[<b>Medical</b> I got some dental surgery done at long last early this month, and the recovery was somewhat longer than I’d thought, which didn’t help with projects. I’m all good now, though! (And two teeth lighter.) <b>Watchexec</b>]]></description>
+            <link>https://blog.passcod.name/2018/sep/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/sep/10/monthly-update</guid>
+            <pubDate>Mon, 10 Sep 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: August 2018]]></title>
+            <description><![CDATA[<b>Trademark</b> I got final approval for my trademark on “passcod” just recently. <b>Fanfiction</b> {Naruto} <strong>What A Big Heart You Have</strong>]]></description>
+            <link>https://blog.passcod.name/2018/aug/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/aug/10/monthly-update</guid>
+            <pubDate>Fri, 10 Aug 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: July 2018]]></title>
+            <description><![CDATA[<b>Fanfiction</b> A lot of good stuff this month. {HP} <strong>‘Arithmancer’ series</strong>. {1039k words atow} {HP}]]></description>
+            <link>https://blog.passcod.name/2018/jul/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/jul/10/monthly-update</guid>
+            <pubDate>Tue, 10 Jul 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: June 2018]]></title>
+            <description><![CDATA[Nothing much to announce this month. I’m working on various things. Next month will be more contentful, with some of what I’m working on revealed and various life happenings discussed. <b>Fanfiction</b> {HP}]]></description>
+            <link>https://blog.passcod.name/2018/jun/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/jun/10/monthly-update</guid>
+            <pubDate>Sun, 10 Jun 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: May 2018]]></title>
+            <description><![CDATA[<b>Birthday</b> I turned a quarter century, which… actually it sounded pretty cool in my head and even aloud but now it just sounds <strong>o l d</strong>. I’m still the youngest at work, somehow. Even counting the “intern”. I can only assume]]></description>
+            <link>https://blog.passcod.name/2018/may/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/may/10/monthly-update</guid>
+            <pubDate>Thu, 10 May 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: April 2018]]></title>
+            <description><![CDATA[<b>April Fools</b> This year I did something of my own. In early March, at work, while pairing, we typo’d PHP’s <code>??</code> Null Coalesce operator into <code>???</code>. That was pretty hilarious. We]]></description>
+            <link>https://blog.passcod.name/2018/apr/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/apr/10/monthly-update</guid>
+            <pubDate>Tue, 10 Apr 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: March 2018]]></title>
+            <description><![CDATA[<b>Constellationd</b> I’ve been writing a prototype/MVP for a server agent that uses an on-demand cluster-wide consensus algorithm rather than a Raft-like always-on consensus of only a few master nodes plus a bunch of clients. I have set]]></description>
+            <link>https://blog.passcod.name/2018/mar/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/mar/10/monthly-update</guid>
+            <pubDate>Sat, 10 Mar 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Writing servers with Tokio]]></title>
+            <description><![CDATA[I’ve been writing a small toy project with Tokio in my spare time’s spare time. I’ll write more about it at a later date. What I’ve found writing it, though, is that there is a specific pattern to writing servers,]]></description>
+            <link>https://blog.passcod.name/2018/mar/07/writing-servers-with-tokio</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/mar/07/writing-servers-with-tokio</guid>
+            <pubDate>Wed, 07 Mar 2018 09:35:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: February 2018]]></title>
+            <description><![CDATA[Not much to say this month. <b>Fanfiction</b> {SW} Somewhere In Time. {74k words atow} {SW} Twin Suns. {24k]]></description>
+            <link>https://blog.passcod.name/2018/feb/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/feb/10/monthly-update</guid>
+            <pubDate>Sat, 10 Feb 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A little elegant state machine with Async Generators]]></title>
+            <description><![CDATA[Today at work I made this up: <code>async function* init_process (steps) { for (let step of steps) { while (true) { try { await step.run() break } catch (error) { </code>]]></description>
+            <link>https://blog.passcod.name/2018/feb/02/a-little-elegant-state-machine-with-async-generators</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/feb/02/a-little-elegant-state-machine-with-async-generators</guid>
+            <pubDate>Fri, 02 Feb 2018 09:40:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: January 2018]]></title>
+            <description><![CDATA[<b>Writing</b> I decided to put the Dawnverse on hold for now. I’ve got several stories I want to tell within it, but I pretty much burned myself off it. I’ll return to it at some point. One thing is particular is that it feels a lot more]]></description>
+            <link>https://blog.passcod.name/2018/jan/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/jan/10/monthly-update</guid>
+            <pubDate>Wed, 10 Jan 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Flexible curry]]></title>
+            <description><![CDATA[This is the general recipe of my curry. I don’t actually refer to a recipe when I make it, and I vary things a lot depending on what I want to put in it, how much time I have, how I feel about it, etc. So this is my attempt at describing a]]></description>
+            <link>https://blog.passcod.name/2018/jan/03/flexible-curry</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2018/jan/03/flexible-curry</guid>
+            <pubDate>Wed, 03 Jan 2018 07:19:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A Year of Doing More]]></title>
+            <description><![CDATA[<b>This year</b> In the post that started this whole monthly blogging thing, I outlined three things I wanted to do this year: Improve my]]></description>
+            <link>https://blog.passcod.name/2017/dec/31/yearly-summary</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/dec/31/yearly-summary</guid>
+            <pubDate>Sun, 31 Dec 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: December 2017]]></title>
+            <description><![CDATA[<b>Writing</b> I published Chosen Names, a Star Wars crackfic about ridiculous amounts of titles, as inspired by a]]></description>
+            <link>https://blog.passcod.name/2017/dec/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/dec/10/monthly-update</guid>
+            <pubDate>Sun, 10 Dec 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: November 2017]]></title>
+            <description><![CDATA[<b>Music</b> After a couple Spotify Discovers that didn’t really turn up anything I liked, I decided to start my annual “pick a playlist from all the stuff I listened to this year” early. That involves listening to all 500 songs I saved]]></description>
+            <link>https://blog.passcod.name/2017/nov/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/nov/10/monthly-update</guid>
+            <pubDate>Fri, 10 Nov 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Firefox joy — Send to Device]]></title>
+            <description><![CDATA[I’ve seen a lot of noise about Firefox Quantum recently, and rightfully so: it’s faster, smoother, it uses Rust, it’s doing a lot of awesome things. There’s also demos of the Firefox Devtools, with the CSS Grid utilities and other goodies.]]></description>
+            <link>https://blog.passcod.name/2017/oct/24/firefox-joy-send-to-device</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/oct/24/firefox-joy-send-to-device</guid>
+            <pubDate>Tue, 24 Oct 2017 00:12:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: October 2017]]></title>
+            <description><![CDATA[<b>Night-mode improvement</b> Got an idea as I was thinking about putting glow-in-the-dark stars up my ceiling, and it turned out to be a great success at little effort! If you switch this blog to Night mode by clicking the tiny button in the]]></description>
+            <link>https://blog.passcod.name/2017/oct/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/oct/10/monthly-update</guid>
+            <pubDate>Tue, 10 Oct 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: September 2017]]></title>
+            <description><![CDATA[<b>Poetry imports</b> I “imported” (as in, moved/copied from elsewhere onto this blog) three poems, one song, and one very short piece of absurd fiction: Only One]]></description>
+            <link>https://blog.passcod.name/2017/sep/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/sep/10/monthly-update</guid>
+            <pubDate>Sun, 10 Sep 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[An explanation of Rails's permit]]></title>
+            <description><![CDATA[<b>Background</b> In the WeAllJS Slack (which you should come and visit, if you haven’t already!) someone posted a question in the Rails channel (we’re not all and only about JavaScript! there’s a lot there) asking about clarification and help]]></description>
+            <link>https://blog.passcod.name/2017/aug/15/an-explanation-of-rails-permit</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/aug/15/an-explanation-of-rails-permit</guid>
+            <pubDate>Tue, 15 Aug 2017 21:13:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: August 2017]]></title>
+            <description><![CDATA[<b>Me and the dark always</b> I drafted a game called <strong>Me and the dark always</strong> that tries to go against the general practice / consequence of current designs that the “looking” action in games is free. It ended up being a]]></description>
+            <link>https://blog.passcod.name/2017/aug/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/aug/10/monthly-update</guid>
+            <pubDate>Thu, 10 Aug 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: July 2017]]></title>
+            <description><![CDATA[<b>List</b> I watched Neil Gaiman speaking to students last week, and it reminded me that I did have specific things I’ve wanted to do forever. Unlike Gaiman, though, I’ve never noted]]></description>
+            <link>https://blog.passcod.name/2017/jul/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/jul/10/monthly-update</guid>
+            <pubDate>Mon, 10 Jul 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[INotify watch limit]]></title>
+            <description><![CDATA[On Linux, INotify might sometimes hit its internal watch limit. In applications like dropbox, guard, tail, my own]]></description>
+            <link>https://blog.passcod.name/2017/jun/25/inotify-watch-limit</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/jun/25/inotify-watch-limit</guid>
+            <pubDate>Sun, 25 Jun 2017 23:57:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly Update: June 2017]]></title>
+            <description><![CDATA[<b>In the pale darkness of dawn</b> Did a slight rework of the story to have it stand as two distinct fics, especially following my reading of Vanity]]></description>
+            <link>https://blog.passcod.name/2017/jun/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/jun/10/monthly-update</guid>
+            <pubDate>Sat, 10 Jun 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly update: May 2017]]></title>
+            <description><![CDATA[I only started writing this update on the 28th April, so it might be a little shorter than usual. <b>Birthday</b> May 4th was my birthday, which I learned a few years ago coincides with the (unofficial) Star Wars Day (“May the Fourth be]]></description>
+            <link>https://blog.passcod.name/2017/may/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/may/10/monthly-update</guid>
+            <pubDate>Wed, 10 May 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Storing associations of values]]></title>
+            <description><![CDATA[This is a description of an algorithm for a particular pattern I’ve encountered several times throughout my programming and systems designing experience. It’s fairly simple, but nevertheless: The pattern is this: you have a set of values,]]></description>
+            <link>https://blog.passcod.name/2017/apr/10/storing-associations-of-values</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/apr/10/storing-associations-of-values</guid>
+            <pubDate>Mon, 10 Apr 2017 13:09:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly update: April 2017]]></title>
+            <description><![CDATA[<b>Style</b> As you’ve probably noticed, I have refreshed the style of this website, as well as the root of my domain. Goodbye monospaced font for everything! The font is]]></description>
+            <link>https://blog.passcod.name/2017/apr/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/apr/10/monthly-update</guid>
+            <pubDate>Mon, 10 Apr 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A thought on fanfiction]]></title>
+            <description><![CDATA[Fanfiction is a study in what works and what doesn’t, and how something that really seems like it shouldn’t work actually does if you do it in a particular way. You get a lot of that in Ship Fanfiction, where most of the canon plot is background,]]></description>
+            <link>https://blog.passcod.name/2017/apr/01/a-thought-on-fanfiction</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/apr/01/a-thought-on-fanfiction</guid>
+            <pubDate>Sat, 01 Apr 2017 03:58:10 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly update: March 2017]]></title>
+            <description><![CDATA[<b>NZ.js</b> As this is published, I am at a JavaScript conference in Wellington. Now, as I write this, I have <em>no idea</em>, but I’m pretty sure I’m going to love the talks and]]></description>
+            <link>https://blog.passcod.name/2017/mar/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/mar/10/monthly-update</guid>
+            <pubDate>Fri, 10 Mar 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lighting up Rust with Neon]]></title>
+            <description><![CDATA[Frustrated by the lack of easy-to-use web frameworks that support Rust <strong>stable</strong>, I decided to use a stack that I know and love, and that has an absolutely humongous amount of middleware that would do everything I wanted: Node.js.]]></description>
+            <link>https://blog.passcod.name/2017/mar/05/lighting-up-rust-with-neon</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/mar/05/lighting-up-rust-with-neon</guid>
+            <pubDate>Sun, 05 Mar 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly update: Feb 2017]]></title>
+            <description><![CDATA[<b>Writing</b> I’ve spent a lot of my weekends writing a Star Wars fanfic. I’m going to finish it before I publish, to avoid publishing and then abandoning it when I eventually realise I’ve written myself into a corner. It’s completely]]></description>
+            <link>https://blog.passcod.name/2017/feb/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/feb/10/monthly-update</guid>
+            <pubDate>Fri, 10 Feb 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[One summer morning]]></title>
+            <description><![CDATA[Breathing the fresh air<i> /</i> in the middle of light rain<i> /</i> and the smell of wet fog<i> /</i> I resolve to go walk up again<i> /</i> and visit the mountain, my friend.]]></description>
+            <link>https://blog.passcod.name/2017/feb/08/one-summer-morning</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/feb/08/one-summer-morning</guid>
+            <pubDate>Wed, 08 Feb 2017 22:34:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Finally, I knew]]></title>
+            <description><![CDATA[I hope, for your sake, that he forgives me. It was many moons before I understood this seeming contradiction. But it was too late; he was gone, and I was alas forever forsaken.]]></description>
+            <link>https://blog.passcod.name/2017/jan/23/finally-i-knew</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/jan/23/finally-i-knew</guid>
+            <pubDate>Mon, 23 Jan 2017 16:33:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monthly update: Jan 2017]]></title>
+            <description><![CDATA[<b>Tourist</b> There’s been two chapters of Tourist this period, so naturally I’ve commented with my impressions on both:]]></description>
+            <link>https://blog.passcod.name/2017/jan/10/monthly-update</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/jan/10/monthly-update</guid>
+            <pubDate>Tue, 10 Jan 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[There is no such thing as writing for adults]]></title>
+            <description><![CDATA[I’ve read this article recently that quotes and contextualises an essay by Tolkien on how “there is no such thing as writing for children.” It]]></description>
+            <link>https://blog.passcod.name/2017/jan/04/there-is-no-such-thing-as-writing-for-adults</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/jan/04/there-is-no-such-thing-as-writing-for-adults</guid>
+            <pubDate>Wed, 04 Jan 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mountain]]></title>
+            <description><![CDATA[My mountain is Knowledge. When the ship of my early childhood approached the land of life, knowledge is what I saw and what I started seeking. My journey began on the coast, where I learned to walk, and then I looked up, and saw all that I]]></description>
+            <link>https://blog.passcod.name/2017/jan/03/mountain</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2017/jan/03/mountain</guid>
+            <pubDate>Tue, 03 Jan 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Blogging more and starting on new year resolutions early]]></title>
+            <description><![CDATA[Partly inspired by txanatan’s weekly roundup that just came out right now, I’ve decided to start blogging a little bit more! The first thing I noticed while opening my blog]]></description>
+            <link>https://blog.passcod.name/2016/dec/10/blogging-more-and-starting-on-new-year-resolutions-early</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2016/dec/10/blogging-more-and-starting-on-new-year-resolutions-early</guid>
+            <pubDate>Sat, 10 Dec 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tree]]></title>
+            <description><![CDATA[Are you, are you<i> /</i> Coming up with me<i> /</i> They say they will be<i> /</i> They say up, will we be<i> /</i> Brave enough, brave to follow<i> /</i> To leave, to flee, to go<i> /</i> If we split, to leave me<i> /</i> To mine and only<i> /</i> Fate.]]></description>
+            <link>https://blog.passcod.name/2016/nov/13/tree</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2016/nov/13/tree</guid>
+            <pubDate>Sun, 13 Nov 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Unlit]]></title>
+            <description><![CDATA[“You shouldn’t be driving.”<i> /</i> “I haven’t had a drink.”<i> /</i> “You know what I mean.”<i> /</i> “Yeah.” I drove on, Sani besides me.<i> /</i> Stopped at the lights, fumbled with my phone, trying to put music on.<i> /</i> Light turns green.<i> /</i>]]></description>
+            <link>https://blog.passcod.name/2016/oct/14/unlit</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2016/oct/14/unlit</guid>
+            <pubDate>Fri, 14 Oct 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Gaston lagaffe]]></title>
+            <description><![CDATA[This week I discovered that one of my all-time favourite comics, Gaston Lagaffe, was never translated into English. Ever. I find that really sad because Gaston was, and still is,]]></description>
+            <link>https://blog.passcod.name/2016/sep/23/gaston-lagaffe</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2016/sep/23/gaston-lagaffe</guid>
+            <pubDate>Fri, 23 Sep 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Regulus]]></title>
+            <description><![CDATA[We lived forever, and would live forever.<i> /</i> So we had concluded. We didn’t know, of course, because none can predict the future. But we had attempted everything, and still, we lived. We had watched, in the meantime, people come and go,]]></description>
+            <link>https://blog.passcod.name/2016/aug/16/regulus</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2016/aug/16/regulus</guid>
+            <pubDate>Tue, 16 Aug 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Fanfic lists]]></title>
+            <description><![CDATA[For the past two months and a few weeks, I had given myself the challenge to read all fics on this list of Harry Potter fanfics, provided they met my criteria and]]></description>
+            <link>https://blog.passcod.name/2016/jul/10/fanfic-lists</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2016/jul/10/fanfic-lists</guid>
+            <pubDate>Sun, 10 Jul 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Self]]></title>
+            <description><![CDATA[Selflove, selfhate, selfwhatever<i> /</i> I am a professional selfhater<i> /</i> I do, every day, my regulation 24 hours<i> /</i> And some more, for my own pleasures<i> /</i> Every day, a little more, without fail. Selflove, selfhate, what does it]]></description>
+            <link>https://blog.passcod.name/2016/jun/06/self</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2016/jun/06/self</guid>
+            <pubDate>Mon, 06 Jun 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Blanket license revocation]]></title>
+            <description><![CDATA[Prior to today, Saturday 13th February 2016, all my works were, by default, released in the Public Domain under the Creative Commons CC0 1.0. This is no longer the case. While many of my works still remain in the public domain, and]]></description>
+            <link>https://blog.passcod.name/2016/feb/13/blanket-license-revocation</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2016/feb/13/blanket-license-revocation</guid>
+            <pubDate>Sat, 13 Feb 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Road to Hell]]></title>
+            <description><![CDATA[We are walking on the road to hell<i> /</i> we are walking on the road to hell. We come from the worlds behind us,<i> /</i> we come from the worlds of people,<i> /</i> we come from a thousand paradises. We are walking on the road to]]></description>
+            <link>https://blog.passcod.name/2015/oct/12/the-road-to-hell</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2015/oct/12/the-road-to-hell</guid>
+            <pubDate>Mon, 12 Oct 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Air new zealand happy rant]]></title>
+            <description><![CDATA[If you’ve never flown in an Air New Zealand flight, it’s worth a go. They’re <em>different</em>. Having gone through four other air companies in the last month, all so-called “good”, I feel like I have had an appreciation of their]]></description>
+            <link>https://blog.passcod.name/2015/sep/03/air-new-zealand-happy-rant</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2015/sep/03/air-new-zealand-happy-rant</guid>
+            <pubDate>Thu, 03 Sep 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Hold]]></title>
+            <description><![CDATA[<em>(Originally written thinking of, and dedicated to, my friend Alice.)</em> Hold steadfast, friend Hold against hordes<i> /</i> against the very wind<i> /</i> rolling off mountain peaks<i> /</i> against the rain<i> /</i> the]]></description>
+            <link>https://blog.passcod.name/2015/apr/29/hold</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2015/apr/29/hold</guid>
+            <pubDate>Wed, 29 Apr 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sorry]]></title>
+            <description><![CDATA[I just<i> /</i> wanted It seems hopeless. It seems like the world’s an ugly place. Ever since you told me, ever since I knew, ever since we lived. wanted to<i> /</i> make you<i> /</i> smile Do you remember the beach? The sand, the]]></description>
+            <link>https://blog.passcod.name/2015/feb/24/sorry</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2015/feb/24/sorry</guid>
+            <pubDate>Tue, 24 Feb 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Right over there]]></title>
+            <description><![CDATA[I am in the great unknown. Slowly flying away<i> /</i> from nowhere to be seen<i> /</i> to where the wind will carry me. Happy,<i> /</i> I think. There is a bird beside me. It<i> /</i> sings softly, as softly as a bird<i> /</i> can, a]]></description>
+            <link>https://blog.passcod.name/2015/jan/26/right-over-there</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2015/jan/26/right-over-there</guid>
+            <pubDate>Mon, 26 Jan 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[300 shorts]]></title>
+            <description><![CDATA[I aim to write 300 shorts. I am not setting myself a timeline nor a deadline. It could take years, and most probably will take more than one. I simply wish to write 300 shorts, not to write 300 shorts in a set time. The definition]]></description>
+            <link>https://blog.passcod.name/2015/jan/25/300-shorts</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2015/jan/25/300-shorts</guid>
+            <pubDate>Sun, 25 Jan 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ali.vei.nth.eni.ght]]></title>
+            <description><![CDATA[Your cat, your glasses, and a giant butterfly walk into a room. You realise you’re the bartender. They ask for coffee. “With almond milk”, the cat adds. “You don’t want the aftermath of cow milk on your tile.” You turn around, sight a half-empty]]></description>
+            <link>https://blog.passcod.name/2015/jan/10/alive-in-the-night</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2015/jan/10/alive-in-the-night</guid>
+            <pubDate>Sat, 10 Jan 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Enby stats]]></title>
+            <description><![CDATA[So the other day after tweeting a few #]]></description>
+            <link>https://blog.passcod.name/2014/dec/23/enby-stats</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/dec/23/enby-stats</guid>
+            <pubDate>Tue, 23 Dec 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sidebar]]></title>
+            <description><![CDATA[<em>(The title is from the trucker radio in City of Angles. SIDEB for sidebar, where you can have semi-private or off-topic conversations.)</em> Two days ago today, I had a dream. It]]></description>
+            <link>https://blog.passcod.name/2014/nov/18/sidebar</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/nov/18/sidebar</guid>
+            <pubDate>Tue, 18 Nov 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A modern retelling of a tale about a great painter]]></title>
+            <description><![CDATA[A project lead wanted to know who amongst her designers was the best. She set up a computer and invited them all to come up and show talent.— Félix Saparelli (@passcod)]]></description>
+            <link>https://blog.passcod.name/2014/oct/20/a-modern-retelling-of-a-tale-about-a-great-painter</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/oct/20/a-modern-retelling-of-a-tale-about-a-great-painter</guid>
+            <pubDate>Mon, 20 Oct 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to avoid ISO 2022 locking escape drudgery]]></title>
+            <description><![CDATA[Ever encountered this? Install mosh Run <code>$ ssh-copy-id localhost</code> Prepend]]></description>
+            <link>https://blog.passcod.name/2014/sep/21/how-to-avoid-iso-2022-locking-escape-drudgery</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/sep/21/how-to-avoid-iso-2022-locking-escape-drudgery</guid>
+            <pubDate>Sun, 21 Sep 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[so many alone at night]]></title>
+            <description><![CDATA[so<i> /</i> many<i> /</i> alone<i> /</i> at night wish<i> /</i> for one<i> /</i> to hold<i> /</i> tightly to squeeze<i> /</i> to take<i> /</i> to kiss<i> /</i> sweetly and feel<i> /</i> one’s arms<i> /</i> around<i> /</i> themselves <code>*heartbeat*</code>]]></description>
+            <link>https://blog.passcod.name/2014/aug/16/so-many-alone-at-night</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/aug/16/so-many-alone-at-night</guid>
+            <pubDate>Sat, 16 Aug 2014 04:46:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Alya]]></title>
+            <description><![CDATA[Three<i> /</i> Over and over Two<i> /</i> Forever and once One<i> /</i> Void and nothingness Zero. Alya told me to repeat this every time I was scared. Before I went to sleep. Before I started my day. Before I fell away into]]></description>
+            <link>https://blog.passcod.name/2014/aug/07/alya</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/aug/07/alya</guid>
+            <pubDate>Thu, 07 Aug 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Bruteforcing the Devil]]></title>
+            <description><![CDATA[Preface, of a sort, by mako himself: Once, there was a circle of artists and wizards. The convocation called itself #Merveilles. For a long time, most of the members of the cadre could be distinguished only by their]]></description>
+            <link>https://blog.passcod.name/2014/jun/05/bruteforcing-the-devil</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/jun/05/bruteforcing-the-devil</guid>
+            <pubDate>Thu, 05 Jun 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Today]]></title>
+            <description><![CDATA[It’s my birthday today. Also <code>#StarWarsDay</code>. And the last day of break.]]></description>
+            <link>https://blog.passcod.name/2014/may/04/today</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/may/04/today</guid>
+            <pubDate>Sun, 04 May 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Brewy Trinity]]></title>
+            <description><![CDATA[Prayer of the Lager, as imagined by GGaR fans: Bar-father, whose pints are heavenly<i> /</i> Jo be Thy name<i> /</i> Thy fiefdom come<i> /</i> Thy beer be drunk<i> /</i> On Earth, as it is in]]></description>
+            <link>https://blog.passcod.name/2014/mar/27/the-brewy-trinity</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/mar/27/the-brewy-trinity</guid>
+            <pubDate>Thu, 27 Mar 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Car tracts EULA]]></title>
+            <description><![CDATA[I put a sign on my windscreen: &quot;By placing a religious tract on this car you agree to forfeit your soul to the devil (or equivalent).&quot;]]></description>
+            <link>https://blog.passcod.name/2014/mar/26/car-tracts-eula</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/mar/26/car-tracts-eula</guid>
+            <pubDate>Wed, 26 Mar 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sleep]]></title>
+            <description><![CDATA[Darkness Darkness all around and<i> /</i> light but not light; red<i> /</i> orange dark but less dark<i> /</i> than darkness. Lines of darkness dancing<i> /</i> across. Deformed shapes of<i> /</i> fire running in circles. Black dark black]]></description>
+            <link>https://blog.passcod.name/2014/mar/19/sleep</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/mar/19/sleep</guid>
+            <pubDate>Wed, 19 Mar 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[LZ4 compression for ramdisk]]></title>
+            <description><![CDATA[A little while ago I saw that lz4 became a new optional dependency to mkinitcpio. Today I decided to see]]></description>
+            <link>https://blog.passcod.name/2014/mar/15/lz4-compression-for-ramdisk</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/mar/15/lz4-compression-for-ramdisk</guid>
+            <pubDate>Sat, 15 Mar 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Github cleanup]]></title>
+            <description><![CDATA[Today I cleaned up my Github repositories. That means I looked through all the repos I own, updated some of them, and deleted a whole lot. Over forty in fact! Here’s a quick summary: Names: <strong>source</strong>]]></description>
+            <link>https://blog.passcod.name/2014/feb/19/github-cleanup</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/feb/19/github-cleanup</guid>
+            <pubDate>Wed, 19 Feb 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Up Up And Away]]></title>
+            <description><![CDATA[Let me fall<i> /</i> so we can fly<i> /</i> so we can glide<i> /</i> over the clouds. Let me fall<i> /</i> so we can fly<i> /</i> so we can float<i> /</i> over the sky. Let me fall<i> /</i> so we can fly<i> /</i> past anything<i> /</i> you’ve ever seen.]]></description>
+            <link>https://blog.passcod.name/2014/feb/08/up-up-and-away</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2014/feb/08/up-up-and-away</guid>
+            <pubDate>Sat, 08 Feb 2014 11:12:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Modern systems languages]]></title>
+            <description><![CDATA[A year or so ago, I started getting interested in two new, modern systems programming languages: Rust and Go. After playing around a bit with both, I chose <strong>Go</strong> to]]></description>
+            <link>https://blog.passcod.name/2013/dec/06/modern-systems-languages</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2013/dec/06/modern-systems-languages</guid>
+            <pubDate>Fri, 06 Dec 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Slowly]]></title>
+            <description><![CDATA[words<i> /</i> drip from your lips my<i> /</i> heart grows colder until<i> /</i> i run away hating<i> /</i> and loving you (original)]]></description>
+            <link>https://blog.passcod.name/2013/nov/24/slowly</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2013/nov/24/slowly</guid>
+            <pubDate>Sun, 24 Nov 2013 03:30:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[People]]></title>
+            <description><![CDATA[<em><strong>Warnings:</strong> drugs, assault.</em> There’s really only two kinds of people in the world: bad people and assholes. It’s not static, either. It can change. You can change. And it’s not all black and white — although with]]></description>
+            <link>https://blog.passcod.name/2013/nov/08/people</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2013/nov/08/people</guid>
+            <pubDate>Fri, 08 Nov 2013 10:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Soft limits and meaningful content cuts]]></title>
+            <description><![CDATA[On Quora, and many other websites, long answers are cut off with a “(more)” button/link which immediately displays the rest of the answer in-place. The cut-off threshold seems to be a hard limit on words or]]></description>
+            <link>https://blog.passcod.name/2013/nov/08/soft-limits-meaningful-cuts</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2013/nov/08/soft-limits-meaningful-cuts</guid>
+            <pubDate>Fri, 08 Nov 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Grow]]></title>
+            <description><![CDATA[(to be read with a calligraphy pen or nib in your hand) Grow.<i> /</i> A word.<i> /</i> A verb.<i> /</i> Germanic. Feel it.<i> /</i> Slow.<i> /</i> Old.<i> /</i> Young. Now I’ll tell you how put it on a page:<i> /</i> we’ll start with the o.]]></description>
+            <link>https://blog.passcod.name/2013/aug/10/grow</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2013/aug/10/grow</guid>
+            <pubDate>Sat, 10 Aug 2013 15:54:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[one and two]]></title>
+            <description><![CDATA[tragically<i> /</i> once upon a time<i> /</i> two people<i> /</i> far away one is missed<i> /</i> two is missed forbidden<i> /</i> hidden away<i> /</i> in the dark two sets of<i> /</i> three small words<i> /</i> repeated<i> /</i> over and over<i> /</i> to]]></description>
+            <link>https://blog.passcod.name/2013/aug/07/one-and-two</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2013/aug/07/one-and-two</guid>
+            <pubDate>Wed, 07 Aug 2013 18:50:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Girl Laughing in the Dictionary]]></title>
+            <description><![CDATA[<em><strong>Warnings:</strong> death, shooting.</em> Leaves falling. Hitting the ground softly. Steps in the snow. The shallow chaotic prints of the children and the deep purposeful ones of the adults. The grey winter sky with numerous]]></description>
+            <link>https://blog.passcod.name/2012/dec/31/the-girl-laughing-in-the-dictionary</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2012/dec/31/the-girl-laughing-in-the-dictionary</guid>
+            <pubDate>Mon, 31 Dec 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Aftermath]]></title>
+            <description><![CDATA[Oh sweet, sweet morning light<i> /</i> you remind me I have to sleep sometime.<i> /</i> I have to sleep.<i> /</i> But not at night.<i> /</i> Night reminds me of her<i> /</i> hair brushing my face at night. It’s been five months and even my friends have]]></description>
+            <link>https://blog.passcod.name/2012/dec/07/aftermath</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2012/dec/07/aftermath</guid>
+            <pubDate>Fri, 07 Dec 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A man]]></title>
+            <description><![CDATA[He was lit up faintly. Standing in a room of golden proportions (which is not saying a lot), he was one stood man (which is). The only lamp, a seemingly old neon, hanging short from its chains, shone darkly above none. None but a]]></description>
+            <link>https://blog.passcod.name/2011/feb/13/a-man</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2011/feb/13/a-man</guid>
+            <pubDate>Sun, 13 Feb 2011 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mid-loss]]></title>
+            <description><![CDATA[Dark. <em>Mid-Dawn</em> Softly I walk<i> /</i> forward. In the<i> /</i> first light of the<i> /</i> waking sun. My mind<i> /</i> still and clear and<i> /</i> white and black. Yet I<i> /</i> step up down and go<i> /</i> to the usual things of<i> /</i> the]]></description>
+            <link>https://blog.passcod.name/2010/oct/08/mid-loss</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2010/oct/08/mid-loss</guid>
+            <pubDate>Fri, 08 Oct 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Only One Left]]></title>
+            <description><![CDATA[The door is closed.<i> /</i> Dusk fades to night.<i> /</i> I on a stool,<i> /</i> eyes on embers. I remember. Crowded valleys<i> /</i> Golden mountains They arrived<i> /</i> Howls<i> /</i> Tears<i> /</i> Blood<i> /</i> Crumpled hope I]]></description>
+            <link>https://blog.passcod.name/2009/jul/28/only-one-left</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2009/jul/28/only-one-left</guid>
+            <pubDate>Tue, 28 Jul 2009 02:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The box]]></title>
+            <description><![CDATA[The box was simple. It was hand-crafted, seemingly by inexperienced hands. The lid was not attached to it, except for two mould-eaten strings, passed through rough holes in the wood. There were carvings on its top: words now unredable, names, a]]></description>
+            <link>https://blog.passcod.name/2008/oct/28/the-box</link>
+            <guid isPermaLink="true">https://blog.passcod.name/2008/oct/28/the-box</guid>
+            <pubDate>Tue, 28 Oct 2008 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

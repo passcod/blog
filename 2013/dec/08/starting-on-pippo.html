@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from blog.nut/2013/dec/08/starting-on-pippo by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2020 14:47:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script>var _gaq = _gaq || []; _gaq.push(['_setDomainName', location.hostname]);</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>
+Starting on pippo -       Félix “passcod” Saparelli - Blog
+    </title>
+    <link rel="alternate" href="../../../feed">
+    <link rel="stylesheet" href="../../../assets/1.3.3/style.css">
+  </head>
+
+  <body>
+    <div class="raised">
+      <header class="root">
+        <h1><a href="../../../index-2.html">Félix Saparelli</a></h1>
+        <p class="sidelong"><a rel="me" href="https://passcod.name/">(about me)</a></p>
+        <p class="subtitle">a.k.a. passcod<a href="https://blog.passcod.name/trademark">™</a></p>
+      </header>
+      <main>
+        <article class="h-entry e-content">
+  <header>
+    <h1 class="p-name">Starting on pippo</h1>
+
+  
+    <p>Posted on <a href="starting-on-pippo.html" class="u-url"><date datetime="2013-12-08T00:00:00.000Z" title="2013-12-08T00:00:00.000Z" class="dt-published">Dec 8 ‘13</date></a></p>
+  
+
+  
+    <p>This
+      
+      <a href="../../../tag/entry.html" rel="main tag" class="p-category">entry</a>
+      is also tagged as
+        <a href="../../../tag/rust.html" rel="tag" class="p-category">rust</a>, <a href="../../../tag/pippo.html" rel="tag" class="p-category">pippo</a>
+      
+    </p>
+  
+
+  
+    <p>
+      It has one
+      <abbr title="Parent posts are posts that inspired, led to, or are obsoleted by this one.">parent</abbr>:
+      <a href="../06/modern-systems-languages.html" rel="up" title="A year or so ago, I started getting interested in two new, modern systems programming languages: Rust and Go. After playing around a bit with both, I chose Go to…" class="u-in-reply-to">Modern systems languages</a>
+    </p>
+  
+  </header>
+
+  <p>Today I’m starting on <strong>Pippo</strong>, a DBMS I’ve spent the past 18 months thinking
+about. It started as a experimental thought on a NoSQL document store based on
+git, and has evolved to be both complex and beautifully simple at the same
+time.</p>
+<p>I’m going to start by implementing the two lower level components: the block
+store and the object layer. The block store contains content-addressed, 16MiB
+(configurable) maximum, blocks of data. It uses xxHash by default, with a
+strategy to fall back to other hashes if collisions occur. The object layer
+contains documents (“objects”) that have unique IDs (not content-addressed),
+and point to blocks that contain the actual data. Both the metadata (structure)
+and the data is in the block layer, resulting in very small sizes for the
+objects themselves.</p>
+<p>The object layer is what users and other layers will access most often. The
+object layer is capable of handling incoming and outgoing streams, allowing one
+to write to an object without first knowing its length, without needing to
+cache it all beforehand. The object layer can only access and modify objects if
+you know its ID, listing all objects is used for <strong>debug only</strong>.</p>
+
+
+  <footer>
+  
+    <p>Travel back to the <a rel="prev" href="../06/modern-systems-languages.html" title="A year or so ago, I started getting interested in two new, modern systems programming languages: Rust and Go. After playing around a bit with both, I chose Go to…">previous</a> article</p>
+  
+
+  
+    <p>Skip forward to the <a rel="next" href="../../../2014/feb/08/up-up-and-away.html" title="Let me fall / so we can fly / so we can glide / over the clouds. Let me fall / so we can fly / so we can float / over the sky. Let me fall / so we can fly / past anything / you’ve ever seen.…">next</a> one</p>
+  
+
+    <p>Praise, thoughts, criticism? <a href="https://twitter.com/passcod">@passcod</a> or <a href="mailto:felix@passcod.name">felix@passcod.name</a></p>
+
+  
+  </footer>
+</article>
+
+      </main>
+    </div>
+    <footer class="root">
+      <p>
+        <a rel="alternate" href="../../../feed">Feed</a>.
+        © 2008–2020.
+        Content licensed under <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      </p>
+    </footer>
+
+    <button class="flip" title="Turn the lights off.">day</button>
+    <script async src="../../../assets/1.3.3/circadian.js"></script>
+    <script async src="../../../assets/1.3.3/prism.js"></script>
+
+    <link rel="stylesheet" href="../../../assets/1.3.3/fonts.css">
+    <link rel="stylesheet" href="../../../assets/1.3.3/prism.css">
+  </body>
+
+<!-- Mirrored from blog.nut/2013/dec/08/starting-on-pippo by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2020 14:47:29 GMT -->
+</html>

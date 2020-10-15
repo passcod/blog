@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from blog.nut/2018/feb/02/a-little-elegant-state-machine-with-async-generators by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2020 14:47:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script>var _gaq = _gaq || []; _gaq.push(['_setDomainName', location.hostname]);</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>
+A little elegant state machine with Async Generators -       Félix “passcod” Saparelli - Blog
+    </title>
+    <link rel="alternate" href="../../../feed">
+    <link rel="stylesheet" href="../../../assets/1.3.3/style.css">
+  </head>
+
+  <body>
+    <div class="raised">
+      <header class="root">
+        <h1><a href="../../../index-2.html">Félix Saparelli</a></h1>
+        <p class="sidelong"><a rel="me" href="https://passcod.name/">(about me)</a></p>
+        <p class="subtitle">a.k.a. passcod<a href="https://blog.passcod.name/trademark">™</a></p>
+      </header>
+      <main>
+        <article class="h-entry e-content">
+  <header>
+    <h1 class="p-name">A little elegant state machine with Async Generators</h1>
+
+  
+    <p>Posted on <a href="a-little-elegant-state-machine-with-async-generators.html" class="u-url"><date datetime="2018-02-02T09:40:18.000Z" title="2018-02-02T09:40:18.000Z" class="dt-published">Feb 2 ‘18</date></a></p>
+  
+
+  
+
+  
+  </header>
+
+  <p>Today at work I made this up:</p>
+<pre><code class="language-js">async function* init_process (steps) {
+   for (let step of steps) {
+      while (true) {
+         try {
+            await step.run()
+            break
+         } catch (error) {
+            handle_error({ step, error })
+            yield
+         }
+      }
+   }
+}
+</code></pre>
+<p>What this does is it takes a list of <code>steps</code>, which are async tasks (in our
+case a request and some processing), runs through them, and if there is an
+error at some point it hands back to the caller… and then the caller can
+choose to <em>retry the failed step and go on</em>.</p>
+<p>All in 10 lines of code.</p>
+<p>Beyond brevity, what I like about this code is that as long as you know the
+behaviour of an async generator, of <code>break</code> inside a loop, of a <code>try</code>-<code>catch</code> —
+which are all, to the possible exception of the async generator, fairly
+elemental language structures — you can understand what this little machine
+does simply by running through it line by line, iteration by iteration.</p>
+<p>Here’s how you’d use this:</p>
+<pre><code class="language-js">// load the steps, do some prep work…
+
+// Prepare the little machine
+const process = init_process(steps)
+
+// Hook up the retry button
+$('.retry-button’).click(() =&gt; process.next())
+
+// Start it up
+process.next()
+</code></pre>
+<p>And that’s it!</p>
+<hr />
+<p>Let’s run through this a bit:</p>
+<ol>
+<li>
+<p><code>async function* init_process (steps) {</code></p>
+<p>This is an Async Generator that takes a list of <code>steps</code>. Generators, and
+Async Generators, gets their arguments and then start <em>frozen</em>. They don’t
+do any processing until you first call <code>.next()</code>.</p>
+<p>An Async Generator is just a Generator! All it does special is that you can
+use <code>await</code> inside it and if you want the results of what it <code>yield</code>s, you
+have to await those. (But we don’t use that here so you don’t even need to
+keep that in mind.) There’s no extra magic.</p>
+</li>
+<li>
+<p><code>for (let step of steps) {</code></p>
+<p>We’re going to iterate through all the steps, one at a time.</p>
+</li>
+<li>
+<p><code>while (true) {</code></p>
+<p>This is the first “aha!” moment. To make it possible to <em>retry</em> the current,
+failed, step, we start an infinite loop. If we have a success, we can break
+out of it, dropping back into… the <code>for</code> loop, and thus continuing onto
+the next step. If we have a failure, we <em>don’t</em> break out, and the <code>while</code>
+loop will naturally start that step over.</p>
+</li>
+<li>
+<p><code>try { await step.run(); break</code></p>
+<p>We <code>try</code> the <code>step.run()</code>, and then we <code>break</code>. Because of the way
+exceptions work, <code>break</code> will <em>only run if nothing was thrown</em>. That is, if
+<code>step.run()</code> ended successfully.</p>
+</li>
+<li>
+<p><code>catch (error) { handle_error({ step, error })</code></p>
+<p>We want to immediately handle the error. We <em>could</em> <code>yield</code> the error and
+let the caller handle it, but this way there’s no need for an extra wrapping
+function: we can just call <code>process.next()</code> to start and resume the machine,
+without needing to care about its output.</p>
+</li>
+<li>
+<p><code>yield</code></p>
+<p>The piece of magic that brings it all together. If and when we get to that,
+we <em>freeze</em> the generator state and hand back execution to the caller. It’s
+now up to it to tell the little machine to continue, and it can do that at
+any time. There’s no need for complex state management, of preserving and
+restoring progress: the language itself is taking care of it.</p>
+</li>
+<li>
+<p>Outside: <code>process.next()</code> (the first time)</p>
+<p>Recall that the Generator starts <em>frozen</em> (see 1). The first thing we do is
+call <code>next()</code>, and that unfreezes the machine. It starts processing steps,
+and eventually will either get to the end, or stop at an error.</p>
+</li>
+<li>
+<p>To retry: <code>process.next()</code></p>
+<p>When we hit a snag, <code>handle_error()</code> does its job of telling the user and
+figuring out problems… and then it can choose to display a retry button.
+Or maybe it will want to automatically retry a step if it deems it safe to
+do so. Or maybe the error was very bad, and it just wants to abort. It can
+do all these things, and it can take its time: the little machine will wait
+patiently until it’s told to get going again.</p>
+</li>
+</ol>
+<p>And that’s all there is to it!</p>
+
+
+  <footer>
+  
+    <p>Travel back to the <a rel="prev" href="../../jan/10/monthly-update.html" title="Writing I decided to put the Dawnverse on hold for now. I’ve got several stories I want to tell within it, but I pretty much burned myself off it. I’ll return to it at some point. One thing is particular is that it feels a lot more…">previous</a> article</p>
+  
+
+  
+    <p>Skip forward to the <a rel="next" href="../10/monthly-update.html" title="Not much to say this month. Fanfiction {SW} Somewhere In Time. {74k words atow} {SW} Twin Suns. {24k…">next</a> one</p>
+  
+
+    <p>Praise, thoughts, criticism? <a href="https://twitter.com/passcod">@passcod</a> or <a href="mailto:felix@passcod.name">felix@passcod.name</a></p>
+
+  
+  </footer>
+</article>
+
+      </main>
+    </div>
+    <footer class="root">
+      <p>
+        <a rel="alternate" href="../../../feed">Feed</a>.
+        © 2008–2020.
+        Content licensed under <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      </p>
+    </footer>
+
+    <button class="flip" title="Turn the lights off.">day</button>
+    <script async src="../../../assets/1.3.3/circadian.js"></script>
+    <script async src="../../../assets/1.3.3/prism.js"></script>
+
+    <link rel="stylesheet" href="../../../assets/1.3.3/fonts.css">
+    <link rel="stylesheet" href="../../../assets/1.3.3/prism.css">
+  </body>
+
+<!-- Mirrored from blog.nut/2018/feb/02/a-little-elegant-state-machine-with-async-generators by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2020 14:47:07 GMT -->
+</html>

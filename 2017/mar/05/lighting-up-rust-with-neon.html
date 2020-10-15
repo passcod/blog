@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from blog.nut/2017/mar/05/lighting-up-rust-with-neon by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2020 14:47:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script>var _gaq = _gaq || []; _gaq.push(['_setDomainName', location.hostname]);</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>
+Lighting up Rust with Neon -       Félix “passcod” Saparelli - Blog
+    </title>
+    <link rel="alternate" href="../../../feed">
+    <link rel="stylesheet" href="../../../assets/1.3.3/style.css">
+  </head>
+
+  <body>
+    <div class="raised">
+      <header class="root">
+        <h1><a href="../../../index-2.html">Félix Saparelli</a></h1>
+        <p class="sidelong"><a rel="me" href="https://passcod.name/">(about me)</a></p>
+        <p class="subtitle">a.k.a. passcod<a href="https://blog.passcod.name/trademark">™</a></p>
+      </header>
+      <main>
+        <article class="h-entry e-content">
+  <header>
+    <h1 class="p-name">Lighting up Rust with Neon</h1>
+
+  
+    <p>Posted on <a href="lighting-up-rust-with-neon.html" class="u-url"><date datetime="2017-03-05T00:00:00.000Z" title="2017-03-05T00:00:00.000Z" class="dt-published">Mar 5 ‘17</date></a></p>
+  
+
+  
+    <p>This
+      
+      <a href="../../../tag/post.html" rel="main tag" class="p-category">post</a>
+      is also tagged as
+        <a href="../../../tag/neon.html" rel="tag" class="p-category">neon</a>, <a href="../../../tag/rust.html" rel="tag" class="p-category">rust</a>, <a href="../../../tag/blograph.html" rel="tag" class="p-category">blograph</a>, <a href="../../../tag/node.html" rel="tag" class="p-category">node</a>
+      
+    </p>
+  
+
+  
+  </header>
+
+  <p>Frustrated by the lack of easy-to-use web frameworks that support Rust
+<strong>stable</strong>, I decided to use a stack that I know and love, and that has an
+absolutely humongous amount of middleware that would do everything I wanted:
+Node.js. But I wasn’t about to throw all the Rust code I’d written away!
+Fortunately, that’s where <a href="https://www.neon-bindings.com/">Neon</a> comes in.</p>
+<p><strong>Neon</strong> is a library and build tool that makes it drop-dead easy to expose a
+Rust API as a Node.js module. Once I had that binding working and tested, it
+was a breeze to use it in an Express server. Nevertheless, I hit a few gotchas,
+patterns that weren’t obvious at first:</p>
+<h2>Hooking up a Neon class</h2>
+<p>The <a href="https://docs.neon-bindings.com/">Neon documentation</a> is a bit lacking right now. It’s still Rust
+documentation, which is hands down the best auto-generated documentation I’ve
+used, and I use it <em>a lot</em>. In fact, it being so good is the <em>reason</em> why I use
+it a lot. Even without taking the time to write great documentation, the
+auto-generated, no-effort, there-by-default parts are a boon to explore and
+figure out a Rust API.</p>
+<p>Still, for this I had to look at <a href="https://github.com/neon-bindings/neon/tree/master/tests/">the neon tests</a> for example code.
+Then I derived a pattern that I use for all such classes:</p>
+<p>If I have a Neon class <code>JsFoo</code> declared in <code>jsfoo.rs</code>:</p>
+<pre><code class="language-rust">declare_types! {
+    pub class JsFoo for Foo {
+        init(call) {
+            // use one argument…
+        }
+    }
+}
+</code></pre>
+<p>I’d put this at the bottom of the file (making sure to have the right number of
+arguments — that caught me out once or twice):</p>
+<pre><code class="language-rust">pub fn new(call: Call) -&gt; JsResult&lt;JsFoo&gt; {
+    let mut scope = call.scope;
+    let args = call.arguments;
+
+    // pass through one argument
+    let arg0 = args.require(scope, 0)?;
+
+    let foo_class = JsFoo::class(scope)?;
+    let foo_ctor = foo_class.constructor(scope)?;
+    foo_ctor.construct(scope, vec![arg0])
+}
+</code></pre>
+<p>And then in <code>lib.rs</code>, to hook it up to the module, it’s just a simple:</p>
+<pre><code class="language-rust">mod foo;
+
+register_module!(m, {
+    m.export(“foo”, foo::new)?;
+    // the other exports…
+
+    Ok(())
+});
+</code></pre>
+<h2>Constructing Neon classes with Rust data</h2>
+<p>There’s a fairly common situation I ran into: I had a method on a Neon class or
+a function on the module where I wanted to return another Neon class instance,
+<em>filled with data generated in the Rust code.</em></p>
+<p>In pure Rust, there’s typically several ways to construct a struct. But in JS,
+there’s just the one constructor, and in Neon it’s even worse: there’s just the
+one constructor, that only can take JS types as inputs.</p>
+<p>The first thing I thought of was to modify the underlying Rust type directly.
+So down I went reading through Neon source code, trying to figure out how I
+could either <em>replace</em> the Rust value of a constructed Neon class… or implement
+an entirely new constuctor, by hand, that would build the class but with Rust
+data instead of JS data.</p>
+<p>Turns out, this first one was the right idea… but the wrong, over-complicated
+approach. This pattern has two sides:</p>
+<ol>
+<li>
+<p>I have to make sure that my Neon class constructor is cheap, has no
+side-effect, and does not depend on anything else than what I pass in.</p>
+<p>I had at some point a constructor that would do disk I/O based on paths
+passed in an arguments. That’s a no-go. I replaced it with a constructor
+that only built up the underlying Rust type without doing anything else, and
+a <code>load()</code> function that would do the I/O and spit out a modified class
+instance using this very pattern.</p>
+</li>
+<li>
+<p>I have to <strong>wrap the target type in a tuple struct</strong>. That tuple struct
+needs to have its field marked <code>pub</code>, and that’s what I target the Neon
+class at.</p>
+<pre><code class="language-rust">struct WrapFoo(pub Foo);
+
+declare_types! {
+    pub class JsFoo for WrapFoo {
+        init(call) { … }
+    }
+}
+</code></pre>
+</li>
+</ol>
+<p>With those two things done, the remaining bit is simple, especially combined
+with the previous pattern:</p>
+<pre><code class="language-rust">fn load(call: Call) -&gt; JsResult&lt;JsList&gt; {
+    let scope = call.scope;
+    let args = call.arguments;
+    let base = args.require(scope, 0)?.check::&lt;JsString&gt;()?.value();
+
+    let posts = all::load(PathBuf::from(base)).to_vec();
+
+    let farg = vec![JsArray::new(scope, 0)];
+
+    // Look at the `jslist::new`! That’s the pattern shown just before,
+    // here used to construct a Neon class within a Rust function.
+    let mut list = JsFunction::new(scope, jslist::new)?
+        .call(scope, JsNull::new(), farg)?
+        .check::&lt;JsList&gt;()?;
+
+    // Here’s the important bit!
+    // See how the tuple struct wrapping allows you to replace the
+    // underlying Rust value? That’s the entire trick!
+    list.grab(|list| list.0 = List::new(posts));
+    Ok(list)
+}
+</code></pre>
+<h3>Hiding the wrapping type</h3>
+<p>When I was writing tests for my binding, I found that <code>typeof new List()</code> would
+return <code>‘WrapList’</code>… not what I want! I’d rather expose the “nice” name of the
+struct. So, instead of the above, I bound the actual Rust struct to a different
+name, and named the wrapping struct as the original name, like this:</p>
+<pre><code class="language-rust">use list::List as RustList;
+
+struct List(pub RustList);
+
+declare_types! {
+    pub class JsList for List {
+        init(call) { … }
+    }
+}
+</code></pre>
+<p>and now this works: <code>typeof new List() === ‘List’</code>.</p>
+<h2>Making a JsArray</h2>
+<p>This is much more straightforward, but I kept hitting it and then having to
+either figure it out from the compiler messages and documentation all over
+again, or referring to previous code.</p>
+<p>Occasionally I want to create a JsArray. But there’s no easy
+<code>JsArray::from_vec()</code>. I have to create a <code>JsArray</code> with a size, then fill it
+up with values, taking care to set the right indices. And there’s also a lot of
+boilerplate to make sure to use the correct variant of the <code>.set()</code> method, the
+one with <strong>two</strong> parameters instead of <strong>three</strong>.</p>
+<pre><code class="language-rust">// Object contains the `.set()` method on JsArray.
+use neon::js::{JsArray, Object};
+
+// Required to use `.deref_mut()`.
+use std::ops::DerefMut;
+
+// This is assuming we’re starting with a Vec&lt;Handle&gt; named `vec`.
+// If that’s not the case, adjust the JsArray length and the .set()`.
+
+let mut array: Handle&lt;JsArray&gt; = JsArray::new(scope, vec.len() as u32);
+
+// The extra scoping block is necessary to avoid mut/immut clashing.
+{
+    // Here’s where we borrow mutably, this is necessary to get access
+    // to the underlying JsArray from the Handle, as the JsArray has
+    // the 2-parameter `.set(key: Key, value: Value)` method.
+    let raw_array = array.deref_mut();
+
+    // We have to do our own indexing.
+    let mut i: u32 = 0;
+
+    for val in vec {
+        // Setting an array value might fail! So we have to handle that.
+        raw_array.set(i, val)?;
+        i += 1;
+    }
+}
+
+// Here’s where we borrow immutably, as well as return the right type.
+Ok(array.as_value(scope))
+</code></pre>
+<p>That’s that for now!</p>
+
+
+  <footer>
+  
+    <p>Travel back to the <a rel="prev" href="../../feb/10/monthly-update.html" title="Writing I’ve spent a lot of my weekends writing a Star Wars fanfic. I’m going to finish it before I publish, to avoid publishing and then abandoning it when I eventually realise I’ve written myself into a corner. It’s completely…">previous</a> article</p>
+  
+
+  
+    <p>Skip forward to the <a rel="next" href="../10/monthly-update.html" title="NZ.js As this is published, I am at a JavaScript conference in Wellington. Now, as I write this, I have no idea, but I’m pretty sure I’m going to love the talks and…">next</a> one</p>
+  
+
+    <p>Praise, thoughts, criticism? <a href="https://twitter.com/passcod">@passcod</a> or <a href="mailto:felix@passcod.name">felix@passcod.name</a></p>
+
+  
+  </footer>
+</article>
+
+      </main>
+    </div>
+    <footer class="root">
+      <p>
+        <a rel="alternate" href="../../../feed">Feed</a>.
+        © 2008–2020.
+        Content licensed under <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      </p>
+    </footer>
+
+    <button class="flip" title="Turn the lights off.">day</button>
+    <script async src="../../../assets/1.3.3/circadian.js"></script>
+    <script async src="../../../assets/1.3.3/prism.js"></script>
+
+    <link rel="stylesheet" href="../../../assets/1.3.3/fonts.css">
+    <link rel="stylesheet" href="../../../assets/1.3.3/prism.css">
+  </body>
+
+<!-- Mirrored from blog.nut/2017/mar/05/lighting-up-rust-with-neon by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2020 14:47:08 GMT -->
+</html>
