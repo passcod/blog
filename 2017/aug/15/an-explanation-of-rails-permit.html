@@ -1,180 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-<!-- Mirrored from blog.nut/2017/aug/15/an-explanation-of-rails-permit by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2020 15:05:25 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-<head>
+  <head>
     <script>var _gaq = _gaq || []; _gaq.push(['_setDomainName', location.hostname]);</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1">
     <title>
-An explanation of Rails&#39;s permit -       Félix “passcod” Saparelli - Blog
+Not Found -       Félix “passcod” Saparelli - Blog
     </title>
-    <link rel="alternate" href="../../../feed.xml">
-    <link rel="stylesheet" href="../../../assets/1.3.3/style.css">
+    <link rel="alternate" href="/feed.xml">
+    <link rel="stylesheet" href="/assets/1.3.3/style.css">
   </head>
 
   <body>
     <div class="raised">
       <header class="root">
-        <h1><a href="../../../index.html">Félix Saparelli</a></h1>
-        <p class="sidelong"><a rel="me" href="https://passcod.name/">(about me)</a></p>
+        <h1><a href="/">Félix Saparelli</a></h1>
+        <p class="sidelong"><a rel="me" href="https://passcod.name">(about me)</a></p>
         <p class="subtitle">a.k.a. passcod<a href="https://blog.passcod.name/trademark">™</a></p>
       </header>
       <main>
-        <article class="h-entry e-content">
+        <article>
   <header>
-    <h1 class="p-name">An explanation of Rails&#39;s permit</h1>
-
-  
-    <p>Posted on <a href="an-explanation-of-rails-permit.html" class="u-url"><date datetime="2017-08-15T21:13:16.000Z" title="2017-08-15T21:13:16.000Z" class="dt-published">Aug 15 ‘17</date></a></p>
-  
-
-  
-    <p>This
-      
-      <a href="../../../tag/post.html" rel="main tag" class="p-category">post</a>
-      is also tagged as
-        <a href="../../../tag/rails.html" rel="tag" class="p-category">rails</a>, <a href="../../../tag/ruby.html" rel="tag" class="p-category">ruby</a>, <a href="../../../tag/wealljs.html" rel="tag" class="p-category">wealljs</a>
-      
-    </p>
-  
-
-  
+    <h1>Nothing here</h1>
   </header>
-
-  <h2>Background</h2>
-<p>In the WeAllJS Slack (which you should come and visit, if you haven’t already!)
-someone posted a question in the Rails channel (we’re not all and only about
-JavaScript! there’s a lot there) asking about clarification and help around
-Rails’s <code>permit</code> method used to whitelist input values.</p>
-<p>I won’t reproduce the question here, but I’ll paraphrase.</p>
-<p>In essence, they had an input structure looking like this:</p>
-<pre><code class="language-json">{
-   “box”: {
-      “kitten”: [
-         {
-            “name”: “Boo”,
-            “vaccination_dates”: [
-               “2013/10/11”,
-               “2013/01/30”
-            ]
-         },
-
-         {
-            “name”: “Keek”,
-            “vaccination_dates”: [
-               “2014/10/11”
-            ]
-         }
-      ]
-   }
-}
-</code></pre>
-<p>and they wanted to write a <code>permit</code> rule for it. They had tried this:</p>
-<pre><code class="language-ruby">private
-def box_params
-   params.require(:box).permit({kitten: [:name, :vaccination_dates]})
-end
-</code></pre>
-<p>but it wasn’t working. When searching, they’d found <a href="http://patshaughnessy.net/2014/6/16/a-rule-of-thumb-for-strong-parameters">a blog post advocating a
-“Rule of Thumb”</a> for this very method, and found it confusing.</p>
-<p>Now, the article is very thorough, and does explain how it arrives at this “Rule
-of Thumb” quite well. My issue with it is that the Rule itself is confusing and
-looks like a mysterious magical incantation, and that the article goes through a
-lot of trial and error which makes it difficult to follow along <em>when you don’t
-already have an understanding of the <code>permit</code> rules</em>.</p>
-<p>In my explanation, I sought to present a <em>mental model</em> of the <code>permit</code> rule,
-that lets one reason about it and construct complex rules from simple building
-blocks.</p>
-<h2>Disclaimer</h2>
-<p>Please note that I haven’t actually used Rails 4 for quite a while, and the code
-presented may be slightly wrong in places. My aim was to present a mental model
-that I found worked better, not provide perfect code.</p>
-<p>The text below is edited slightly for style, but otherwise is the same I posted
-in the Slack, with the exception of the code samples that have been changed to
-reflect the structures shown above instead of those provided in the channel.</p>
-<h2>A mental model</h2>
-<p>Instead of thinking in terms of “magic” rules, consider the <code>permit</code> structure
-as a verbose form that has shorthand syntaxes.</p>
-<p>Okay, so, <code>permit</code> takes a set of, let’s call them… “permission descriptors”.
-A “permission” has this shape: <code>{ name: type }</code>. It’s a single-element hash with
-a <em>key</em> that’s the name of the attribute you want to permit, and a <em>value</em> with
-the “type” of that attribute. But for brevity, there’s a shorthand so instead of
-a single-element hash, you can just pass a Symbol and it will assume you mean “a
-<em>key</em> of {whatever the symbol is} and a <em>type</em> of ‘scalar’”. We’ll see why
-“scalar” in a moment.</p>
-<p>So in the case of your <code>“name”: “Boo”</code>, you have a <em>key</em> of <code>name</code> and a
-“type” of “a scalar” (here, a string). In the case of <code>“vaccination_dates”: [“2014/10/11”]</code>, you have a <em>key</em> of <code>vaccination_dates</code> and a “type” of “not a
-scalar” (here an array). Now, <a href="http://api.rubyonrails.org/classes/ActionController/Parameters.html#method-i-permit"><code>permit</code>’s docs</a> say this:</p>
-<blockquote>
-<p>Only permitted <strong>scalars</strong> pass the filter.</p>
-</blockquote>
-<p>(Emphasis mine.)</p>
-<p>So for everything that’s <em>not</em> a scalar, we need to further describe the “type”,
-but for anything that <em>is</em> a scalar, we can use the “shorthand” way. And to
-permit an <em>array</em> of scalars, the shorthand is <code>[]</code>.</p>
-<p>To further describe the type, all you do is build up a “permit” object for the
-inner structure. Same rules as usual! It’s just a recursive exercise.</p>
-<p>So for an array, like <code>“kitten”: [ some kind of object, … ]</code> and
-<code>“vaccination_dates”: [ a string, … ]</code>, you have these permits:</p>
-<ul>
-<li>kitten: <code>{ kitten: [ describe the object’s properties ] }</code></li>
-<li>dates: <code>{ vaccination_dates: an array of scalars }</code></li>
-</ul>
-<p>That is:</p>
-<pre><code class="language-ruby">permit([
-  { kitten: [
-    :name,
-    { vaccination_dates: [
-      # nothing there, it’s all just scalars
-    ] }
-  ] }
-])
-</code></pre>
-<p>or:</p>
-<pre><code class="language-ruby">private
-def box_params
-   params.require(:box).permit({ kitten: [ :name, { vaccination_dates: [] } ] })
-end
-</code></pre>
-<p>or without the explicit brackets, as pointed out by another person in the Slack:</p>
-<pre><code class="language-ruby">permit(kitten: [ :name, vaccination_dates: [] ])
-</code></pre>
-
-
-  <footer>
-  
-    <p>Travel back to the <a rel="prev" href="../10/monthly-update.html" title="Me and the dark always I drafted a game called Me and the dark always that tries to go against the general practice / consequence of current designs that the “looking” action in games is free. It ended up being a…">previous</a> article</p>
-  
-
-  
-    <p>Skip forward to the <a rel="next" href="../../sep/10/monthly-update.html" title="Poetry imports I “imported” (as in, moved/copied from elsewhere onto this blog) three poems, one song, and one very short piece of absurd fiction: Only One…">next</a> one</p>
-  
-
-    <p>Praise, thoughts, criticism? <a href="https://twitter.com/passcod">@passcod</a> or <a href="mailto:felix@passcod.name">felix@passcod.name</a></p>
-
-  
-  </footer>
+  <p>(function notFound() { return '(' + notFound.toString() + ')()'; })()</p>
 </article>
 
       </main>
     </div>
     <footer class="root">
       <p>
-        <a rel="alternate" href="../../../feed.xml">Feed</a>.
+        <a rel="alternate" href="/feed.xml">Feed</a>.
         © 2008–2020.
         Content licensed under <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
       </p>
     </footer>
 
     <button class="flip" title="Turn the lights off.">day</button>
-    <script async src="../../../assets/1.3.3/circadian.js"></script>
-    <script async src="../../../assets/1.3.3/prism.js"></script>
+    <script async src="/assets/1.3.3/circadian.js"></script>
+    <script async src="/assets/1.3.3/prism.js"></script>
 
-    <link rel="stylesheet" href="../../../assets/1.3.3/fonts.css">
-    <link rel="stylesheet" href="../../../assets/1.3.3/prism.css">
+    <link rel="stylesheet" href="/assets/1.3.3/fonts.css">
+    <link rel="stylesheet" href="/assets/1.3.3/prism.css">
   </body>
-
-<!-- Mirrored from blog.nut/2017/aug/15/an-explanation-of-rails-permit by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2020 15:05:25 GMT -->
 </html>
